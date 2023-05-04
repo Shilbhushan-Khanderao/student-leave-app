@@ -4,7 +4,6 @@ function Leave(props) {
     <div>
       <div className="container ">
         <hr />
-
         <text className="text-justify">
           Dear Ma'am,
           <br /> I am writing to request a leave of absence from college from{" "}
@@ -23,7 +22,7 @@ function Leave(props) {
           Sincerely,
           <br /> [Your name]
           <br />
-          {props.studentId}
+          PRN : {props.studentId}
         </text>
       </div>
     </div>

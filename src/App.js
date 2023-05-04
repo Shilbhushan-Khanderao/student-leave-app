@@ -1,10 +1,14 @@
 import "./App.css";
-import Input from "./components/Input";
+import ImportData from "./components/Admin/ImportData";
+import Login from "./components/Login";
+import Input from "./components/Student/Input";
 
 function App() {
   return (
     <div className="App">
-      <Input />
+      {/* <Input /> */}
+      {/* <Login/> */}
+      <ImportData />
     </div>
   );
 }

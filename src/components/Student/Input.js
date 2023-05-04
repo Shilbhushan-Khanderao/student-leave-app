@@ -6,8 +6,13 @@ function Input() {
   const [fromDate, setFromDate] = useState();
   const [toDate, setToDate] = useState();
   const [issue, setIssue] = useState();
+  const [show, setShow] = useState(false);
+
+  const showDiv = () => {
+    setShow(true);
+  };
   return (
-    <div className="container ">
+    <div className="container m-1">
       <form>
         <div className="form-group mb-2">
           <label for="formGroupExampleInput">Student PRN</label>
@@ -26,10 +31,10 @@ function Input() {
             id="inlineFormCustomSelectPref"
             onChange={(event) => setIssue(event.target.value)}
           >
-            <option selected>Choose...</option>
-            <option value="Personal">Personal</option>
-            <option value="Medical">Medical</option>
-            <option value="Family">Family</option>
+            <option selected>Choose reason for leave...</option>
+            <option value="personal">Personal</option>
+            <option value="medical">Medical</option>
+            <option value="family">Family</option>
           </select>
         </div>
         <div className="form-group mb-2 row">
@@ -52,17 +57,24 @@ function Input() {
             />
           </div>
         </div>
-        <button className="btn btn-success" type="submit">
-          Submit
-        </button>
+        <div className="text-center mt-3">
+          <button className="btn btn-success" type="submit" onClick={showDiv}>
+            Submit
+          </button>
+        </div>
       </form>
-
-      <Leave
-        studentId={studentId}
-        fromDate={fromDate}
-        toDate={toDate}
-        issue={issue}
-      />
+      <div>
+        {show && (
+          <div>
+            <Leave
+              studentId={studentId}
+              fromDate={fromDate}
+              toDate={toDate}
+              issue={issue}
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
