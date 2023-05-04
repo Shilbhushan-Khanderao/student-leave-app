@@ -11,7 +11,7 @@ function Login() {
                   <div class="mb-md-5 mt-md-4">
                     <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
                     <p class="text-white-50 mb-5">
-                      Enter your mobile no. and password!
+                      Enter your PRN and password!
                     </p>
 
                     <div class="form-outline form-white mb-4">
@@ -20,7 +20,7 @@ function Login() {
                         id="mobileno"
                         class="form-control form-control-lg"
                       />
-                      <label class="form-label">Mobile Number</label>
+                      <label class="form-label">Student PRN</label>
                     </div>
 
                     <div class="form-outline form-white mb-4">

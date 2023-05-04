@@ -17,6 +17,7 @@ function Input() {
         <div className="form-group mb-2">
           <label for="formGroupExampleInput">Student PRN</label>
           <input
+            style={{ height: 100 }}
             type="text"
             className="form-control"
             id="formGroupExampleInput"
@@ -64,16 +65,14 @@ function Input() {
         </div>
       </form>
       <div>
-        {show && (
-          <div>
-            <Leave
-              studentId={studentId}
-              fromDate={fromDate}
-              toDate={toDate}
-              issue={issue}
-            />
-          </div>
-        )}
+        <div>
+          <Leave
+            studentId={studentId}
+            fromDate={fromDate}
+            toDate={toDate}
+            issue={issue}
+          />
+        </div>
       </div>
     </div>
   );
