@@ -22,13 +22,14 @@ export const ViewAllStudents = () => {
                 <div className="card shadow-2-strong">
                   <div className="card-body">
                     <div className="table-responsive">
-                      <table className="table table-borderless mb-0">
+                      <table className="table table-borderless mb-0 ">
                         <thead>
                           <tr>
                             <th className="text-dark">Student PRN</th>
                             <th className="text-dark">Student Name</th>
                             <th className="text-dark">Mobile Number</th>
                             <th className="text-dark">Email Id</th>
+                            <th className="text-dark text-center">Actions</th>
                           </tr>
                         </thead>
                         <tbody>

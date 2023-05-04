@@ -2,6 +2,14 @@ import React from "react";
 function Login() {
   return (
     <div>
+      <a
+        href="Dashboard"
+        class="btn btn-outline-dark btn-sm"
+        role="button"
+        aria-pressed="true"
+      >
+        Dashboard
+      </a>
       <section class="vh-100 gradient-custom">
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
