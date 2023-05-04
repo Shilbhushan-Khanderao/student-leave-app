@@ -9,7 +9,9 @@ function ImportData() {
   }
 
   const importCsvData = (file) => {
-    AdminServices.importData(file)
+    const formData = new FormData();
+    formData.append('file',file);
+    AdminServices.importData(formData)
       .then((response) => {
         console.log("Data Imported Success...");
       })
@@ -25,7 +27,7 @@ function ImportData() {
         <input
           type="file"
           accept=".csv"
-          className="form-control"
+          className="form-control files color"
           onChange={handleChange}
         />
         <button

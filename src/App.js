@@ -6,9 +6,9 @@ import Input from "./components/Student/Input";
 function App() {
   return (
     <div className="App">
-      {/* <Input /> */}
+      <Input />
       {/* <Login/> */}
-      <ImportData />
+      {/* <ImportData /> */}
     </div>
   );
 }
