@@ -1,16 +1,22 @@
 import React, { useEffect, useState } from "react";
+import UpdateStudent from "./UpdateStudent";
+import { Button, Modal, Form } from "react-bootstrap";
 
 export const ViewAllStudents = () => {
   const [students, setStudents] = useState([]);
+  const [show, setShow] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:8080/admin/students")
+    fetch("http://localhost:8080/students")
       .then((res) => res.json())
       .then((result) => {
         setStudents(result);
       });
   }, []);
+
+  const handleShow = (e) => setShow(true);
   return (
     <>
+      {show && <UpdateStudent closeModal={setShow} />}
       <div className="wrapper text-center">
         <h2 className="fs-2 m-0 py-5 px-5">List of Students</h2>
       </div>
@@ -21,6 +27,9 @@ export const ViewAllStudents = () => {
               <div className="col-12">
                 <div className="card shadow-2-strong">
                   <div className="card-body">
+                    <div className="text-start m-2">
+                      <button className="btn btn-primary">Add Student</button>
+                    </div>
                     <div className="table-responsive">
                       <table className="table table-borderless mb-0 ">
                         <thead>
@@ -43,6 +52,9 @@ export const ViewAllStudents = () => {
                                 <button
                                   type="button"
                                   className="btn btn-warning btn-sm px-3 ms-3 mt-3"
+                                  data-toggle="modal"
+                                  data-target="#exampleModal"
+                                  onClick={handleShow}
                                 >
                                   Update
                                   <i className="fas fa-times"></i>

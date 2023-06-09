@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const IMPORTCSV = "http://localhost:8080/admin/upload";
 export const GETSTUDENTS = "http://localhost:8080/admin/students";
+export const LOGINURL = "http://localhost:8080/login";
 class AdminServices {
   importData(formData) {
     return axios.post(IMPORTCSV, formData, {
