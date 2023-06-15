@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export const IMPORTCSV = "http://localhost:8080/admin/upload";
-export const GETSTUDENTS = "http://localhost:8080/admin/students";
 export const LOGINURL = "http://localhost:8080/login";
+export const DELETEALL = "http://localhost:8080/deleteallstudent";
 class AdminServices {
   importData(formData) {
     return axios.post(IMPORTCSV, formData, {
@@ -10,10 +10,6 @@ class AdminServices {
         "Content-Type": "multipart/form-data",
       },
     });
-  }
-
-  getStudents() {
-    return axios.get(GETSTUDENTS);
   }
 }
 export default new AdminServices();
